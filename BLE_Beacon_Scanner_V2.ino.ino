@@ -24,7 +24,7 @@
 #include <BLEUtils.h>
 #include <BLEScan.h>
 #include <BLEAdvertisedDevice.h>
-//--------------
+
 
 
 
@@ -97,13 +97,13 @@ void smartconfigwifi () {
   WiFi.beginSmartConfig();
  
   /* Wait for SmartConfig packet from mobile */
-  Serial.println("Waiting for SmartConfig.");
+  Serial.println("Waiting for SmartConfig...");
   while (!WiFi.smartConfigDone()) {
     delay(500);
     Serial.print(".");
   }
   Serial.println("");
-  Serial.println("SmartConfig done.");
+  Serial.println("SmartConfig done!");
  
   /* Wait for WiFi to connect to AP */
   Serial.println("Waiting for WiFi");
@@ -144,7 +144,7 @@ void BLEsetup () {
   pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
   pBLEScan->setInterval(Interval);  //ms
   pBLEScan->setWindow(Window);  // less or equal setInterval value
-  Serial.println("Scan done!");
+  Serial.println("Scan done ^-^");
 }
 
 
